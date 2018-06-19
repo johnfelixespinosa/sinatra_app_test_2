@@ -8,11 +8,4 @@ ActiveRecord::Base.establish_connection(
   :database => "db/#{ENV['SINATRA_ENV']}.sqlite"
 )
 
-require_relative "../app/controllers/application_controller.rb"
-
-require_relative "../app/controllers/games_controller.rb"
-
-require_relative "../app/controllers/streamers_controller.rb"
-
-Dir[File.join(File.dirname(__FILE__), "../app/models", "*.rb")].each {|f| require f}
-Dir[File.join(File.dirname(__FILE__), "../app/controllers", "*.rb")].sort.each {|f| require f}
+require_all 'app'
