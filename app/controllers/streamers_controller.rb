@@ -19,6 +19,7 @@ class StreamersController < ApplicationController
 
   post '/streamers' do
     @streamer = Streamer.create(name: params["Streamer Name"])
+    @streamer.url = params["URL"]
     @streamer.save
     redirect("/streamers/#{@streamer.name}")
   end
