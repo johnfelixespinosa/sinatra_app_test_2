@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'activerecord', '4.2.5', :require => 'active_record'
-gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
+gem 'sinatra-activerecord'
 gem 'sqlite3'
 gem 'sinatra'
 gem 'thin'
@@ -14,3 +14,4 @@ gem 'rack-test'
 gem 'sinatra-twitter-bootstrap', :require => 'sinatra/twitter-bootstrap'
 gem 'capybara'
 gem 'require_all'
+
